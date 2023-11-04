@@ -1,0 +1,59 @@
+version: "3"
+services:
+  web:
+    image: node:18.17.0-alpine3.17
+    working_dir: /usr/app
+    command: npm run dev
+    volumes:
+      - ./web/.:/usr/app
+      - ./web/node_modules/.:/usr/app/node_modules
+      - ./web/package.json:/usr/app/package.json
+    ports:
+      - "80:3000"
+    networks:
+      - template
+    depends_on:
+      - server
+  server:
+    image: node:18.17.0-alpine3.17
+    working_dir: /usr/app/server
+    command: "npm run start:dev"
+    volumes:
+      - ./server/.:/usr/app/server
+      - ./server/www/.:/usr/app/server/www
+      - ./server/node_modules/.:/usr/app/server/node_modules
+      - ./server/package.json:/usr/app/server/package.json
+    ports:
+      - "4040:${PORT}"
+    env_file:
+      - .env
+    networks:
+      - template
+    depends_on:
+      - postgres
+  postgres:
+    image: "postgres"
+    volumes:
+      - "template-db:/var/lib/postgresql/data"
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    environment:
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_DB: "${DB_NAME}"
+      POSTGRES_USER: "${DB_USER}"
+    networks:
+      - template
+  adminer:
+    image: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    restart: always
+    ports:
+      - 8888:8080
+    networks:
+      - template
+networks:
+  template:
+    driver: bridge
+volumes:
+  template-db:

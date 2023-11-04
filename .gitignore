@@ -1,0 +1,202 @@
+#BACK
+
+server/node_modules
+server/utils/logs
+.env
+server/dist
+server/.DS_Store
+.DS_Store
+server/_app.yaml
+server/app-dev.yaml
+server/app-prod.yaml
+server/package-lock.json
+node_modules
+web/src/environments/*.ts
+server/www
+
+#FRONT
+web/package-lock.json
+
+# Compiled output
+web/dist
+web/tmp
+web/out-tsc
+web/bazel-out
+
+# Node
+web/node_modules
+web/npm-debug.log
+web/yarn-error.log
+
+# IDEs and editors
+web/.idea/
+web/.project
+web/.classpath
+web/.c9/
+web/*.launch
+web/.settings/
+web/*.sublime-workspace
+
+# Visual Studio Code
+web/.vscode/*
+web/!.vscode/settings.json
+web/!.vscode/tasks.json
+web/!.vscode/launch.json
+web/!.vscode/extensions.json
+web/.history/*
+
+# Miscellaneous
+web/.angular/cache
+web/.sass-cache/
+web/connect.lock
+web/coverage
+web/libpeerconnection.log
+web/testem.log
+web/typings
+
+# System files
+web/.DS_Store
+web/Thumbs.db
+
+package-lock.json
+app-test.yaml
+server/app-test copy.yaml
+server/application_default_credentials.json
+
+web/.next
+server/gcloud.json
+
+web/.env.local
+web/.env.production
+web/src/config/config.ts
+
+#mobile
+# OSX
+#
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+
+# node.js
+#
+mobile/node_modules/
+mobile/npm-debug.log
+mobile/yarn-error.log
+
+# BUCK
+mobile/buck-out/
+\.buckd/
+*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifacts
+*.jsbundle
+
+# CocoaPods
+/ios/Pods/
+
+# Expo
+mobile/.expo/*
+moible/web-build/
+
+.DS_Store
+
+# WEB
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# @generated: @expo/next-adapter@3.1.10
+/.expo/*
+# Expo Web
+/web-build/*
+# Expo Native
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+# Next.js
+/.next/*
+/out/
+# Next.js production
+/build/
+# Next.js dependencies
+/.pnp
+.pnp.js
+# @end @expo/next-adapter
+
+.DS_Store
+.DS_Store
